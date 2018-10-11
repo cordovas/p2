@@ -32,7 +32,20 @@ require 'logic.php'
                id="numberRange"
                name='totalNumbers'
                placeholder="How many numbers are in the range?">
+
+<!--        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
     </div>
+
+    <?php if (isset($errors)) : ?>
+        <small id="emailHelp" class="form-text text-muted"><?= $errors ?></small>    <!--    <div class='alert alert-danger'>-->
+    <!--        <ul>-->
+    <!--            --><?php //foreach ($errors as $error) : ?>
+    <!--                <li>--><?//= $error ?><!--</li>-->
+    <!--            --><?php //endforeach ?>
+    <!--        </ul>-->
+    <!--    </div>-->
+    <?php endif ?>
+
 
     <div class="form-group">
         <label for="numberSelection">Random number quantity?</label>

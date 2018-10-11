@@ -7,6 +7,7 @@ if (isset($_SESSION['result'])) {
     $totalNumbers = $results['totalNumbers'];
     $randomNumbers = $results['randomNumbers'];
     $showOdds = $results['showOdds'];
+    $errors = $results['errors'];
 
     $lotteryList = [];
 
