@@ -86,7 +86,7 @@ require 'logic.php'
 <?php if(isset($totalNumbers)) : ?>
 
     <div class="alert alert-primary" role="alert">
-        Your amazingly lucky numbers are:
+        Your amazingly lucky numbers are: <?php var_dump($lotteryList); ?>
     </div>
 
 <?php endif; ?>
@@ -109,21 +109,3 @@ print array
 
 </body>
 </html>
-
-<!---->
-<!--function factorial($n) {-->
-<!--if ($n <= 1) {-->
-<!--return 1;-->
-<!--} else {-->
-<!--return factorial($n - 1) * $n;-->
-<!--}-->
-<!--}-->
-<!---->
-<!--function combinations($n, $k) {-->
-<!--//note this defualts to 0 if $n < $k-->
-<!--if ($n < $k) {-->
-<!--return 0;-->
-<!--} else {-->
-<!--return factorial($n)/(factorial($k)*factorial(($n - $k)));-->
-<!--}-->
-<!--}-->
