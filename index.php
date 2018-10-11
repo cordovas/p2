@@ -1,6 +1,6 @@
 <?php
 require 'helpers.php';
-//require 'logic.php';
+require 'logic.php'
 
 ?>
 
@@ -59,13 +59,13 @@ require 'helpers.php';
 <form action='search.php' method='GET'>
     <div class="form-group">
         <label for="numberRange">Total numbers:</label>
-        <input type="text" class="form-control" id="numberRange" placeholder="How many numbers are in the range?">
+        <input type="text" class="form-control" id="numberRange" name='totalNumbers' placeholder="How many numbers are in the range?">
 <!--        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
     </div>
 
     <div class="form-group">
         <label for="numberSelection">Random number quantity?</label>
-        <select class="form-control" id="numberSelection">
+        <select class="form-control" name='randomNumbers' id="numberSelection" >
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -77,11 +77,22 @@ require 'helpers.php';
     </div>
 
     <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="odds">
+        <input type="checkbox" class="form-check-input" id="odds" name='showOdds'>
         <label class="form-check-label" for="odds">Show me my odds!</label>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+<?php if(isset($totalNumbers)) : ?>
+
+    <div class="alert alert-primary" role="alert">
+        Your amazingly lucky numbers are:
+    </div>
+
+<?php endif; ?>
+
+
+
 
 <p style='margin-top: 100px;'>
 
