@@ -11,7 +11,6 @@ $totalNumbers = $_GET['totalNumbers'];
 $randomNumbers = $_GET['randomNumbers'];
 $showOdds = $_GET['showOdds'];
 
-
 $_SESSION['result'] = [
     'totalNumbers' => $totalNumbers,
     'randomNumbers' => $randomNumbers,
