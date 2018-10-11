@@ -10,6 +10,9 @@ if (isset($_SESSION['result'])) {
 
     $lotteryList = [];
 
+//    dump($totalNumbers);
+//    die();
+
     for ($i = 0; $i < $randomNumbers; $i++) {
         $var = random_int(1, $totalNumbers);
         array_push($lotteryList, $var);
@@ -34,21 +37,13 @@ if (isset($_SESSION['result'])) {
         }
     }
 
-    $oddResults = combinations($totalNumbers,$randomNumbers);
+    $oddResults = combinations($totalNumbers, $randomNumbers);
 
+    session_unset();
 }
 
 
 
-////$var = random_int( 1 , 6 );
-//
-//function randomGenerator($n)
-//{
-//    #empty array
-//    #get the max number for the int random number
-//    #
-//}
-//
 
 //function factorial($n) {
 //    if ($n <= 1) {
@@ -68,4 +63,3 @@ if (isset($_SESSION['result'])) {
 //}
 
 
-session_unset();

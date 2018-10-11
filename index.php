@@ -32,7 +32,6 @@ require 'logic.php'
                id="numberRange"
                name='totalNumbers'
                placeholder="How many numbers are in the range?">
-        <!--        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
     </div>
 
     <div class="form-group">
@@ -57,7 +56,7 @@ require 'logic.php'
 
 <?php if (isset($totalNumbers)) : ?>
 
-    <div class="alert alert-primary" role="alert">
+    <div class="alert alert-primary top-spacing" role="alert">
         Your amazingly lucky numbers are:
         <?php echo implode(', ', $lotteryList); ?>
     </div>
@@ -66,10 +65,10 @@ require 'logic.php'
 
 <?php if (isset($showOdds)) : ?>
 
-<div class="alert alert-primary" role="alert">
-    Your odds of winning are 1 in
-    <?php echo $oddResults; ?>
-</div>
+    <div class="alert alert-warning" role="alert">
+        Your odds of winning are 1 in
+        <?php echo $oddResults; ?>
+    </div>
 
 <?php endif; ?>
 

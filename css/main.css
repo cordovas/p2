@@ -24,3 +24,7 @@ h1,h2 {
 img {
     margin: 20px;
 }
+
+.top-spacing {
+    margin-top: 40px;
+}
