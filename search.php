@@ -10,9 +10,9 @@ session_start();
 
 $form = new DWA\Form($_GET);
 
-$totalNumbers = $_GET['totalNumbers'];
-$randomNumbers = $_GET['randomNumbers'];
-$showOdds = $_GET['showOdds'];
+$totalNumbers = $form->get('totalNumbers');
+$randomNumbers = $form->get('randomNumbers');
+$showOdds = $form->get('showOdds');
 
 $_SESSION['result'] = [
     'totalNumbers' => $totalNumbers,
