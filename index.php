@@ -31,10 +31,8 @@ require 'logic.php'
                class="form-control"
                id="numberRange"
                name='totalNumbers'
-               placeholder="How many numbers are in the range?">
-
-        <!--        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
-
+               placeholder="How many numbers are in the range?"
+               value = '<?= $totalNumbers ?? '' ?>' ">
         <?php if (isset($errors)) : ?>
             <small id="emailHelp" class="form-text textColor">
                 <?php foreach ($errors as $error) : ?>
