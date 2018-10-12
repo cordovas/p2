@@ -46,13 +46,13 @@ require 'logic.php'
     <div class="form-group">
         <label for="numberSelection">Random number quantity?</label>
         <select class="form-control" name='randomNumbers' id="numberSelection">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
+            <option value="1" <?php if (isset($randomNumbers) and $randomNumbers == 1) echo 'selected' ?>>1</option>
+            <option value="2" <?php if (isset($randomNumbers) and $randomNumbers == 2) echo 'selected' ?>>2</option>
+            <option value="3" <?php if (isset($randomNumbers) and $randomNumbers == 3) echo 'selected' ?>>3</option>
+            <option value="4" <?php if (isset($randomNumbers) and $randomNumbers == 4) echo 'selected' ?>>4</option>
+            <option value="5" <?php if (isset($randomNumbers) and $randomNumbers == 5) echo 'selected' ?>>5</option>
+            <option value="6" <?php if (isset($randomNumbers) and $randomNumbers == 6) echo 'selected' ?>>6</option>
+            <option value="7" <?php if (isset($randomNumbers) and $randomNumbers == 7) echo 'selected' ?>>7</option>
         </select>
     </div>
 
