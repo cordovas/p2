@@ -32,7 +32,7 @@ require 'logic.php'
                id="numberRange"
                name='totalNumbers'
                placeholder="How many numbers are in the range?"
-               value = '<?= $totalNumbers ?? '' ?>' ">
+               value='<?= $totalNumbers ?? '' ?>' >
         <?php if (isset($errors)) : ?>
             <small id="emailHelp" class="form-text textColor">
                 <?php foreach ($errors as $error) : ?>
@@ -57,7 +57,10 @@ require 'logic.php'
     </div>
 
     <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="odds" name='showOdds'>
+        <input type="checkbox"
+               class="form-check-input"
+               id="odds"
+               name='showOdds' <?php if (isset($showOdds) and $showOdds) echo 'checked' ?> >
         <label class="form-check-label" for="odds">Show me my odds!</label>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
