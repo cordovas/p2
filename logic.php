@@ -19,7 +19,8 @@ if (isset($_SESSION['result'])) {
     if (!$errors) {
         for ($i = 0; $i < $randomNumbers; $i++) {
             $var = random_int(1, $totalNumbers);
-            array_push($lotteryList, $var);
+            $moreRandomness = ceil($var * ((random_int ( 1 , 10))/10));
+            array_push($lotteryList, $moreRandomness);
         }
 
         function factorial($totalNumbers)
