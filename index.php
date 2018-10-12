@@ -65,7 +65,7 @@ require 'logic.php'
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
-<?php if (isset($errors)) : ?>
+<?php if (isset($errors) && (count($errors) == 0)) : ?>
 
     <?php if (isset($totalNumbers)) : ?>
 

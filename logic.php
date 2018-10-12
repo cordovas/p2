@@ -12,6 +12,10 @@ if (isset($_SESSION['result'])) {
     $lotteryList = [];
 
 //    $chill = (int)$totalNumbers;
+
+//dump($errors);
+//die();
+
     if (!$errors) {
         for ($i = 0; $i < $randomNumbers; $i++) {
             $var = random_int(1, $totalNumbers);
