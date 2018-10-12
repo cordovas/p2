@@ -15,7 +15,7 @@ $randomNumbers = $form->get('randomNumbers');
 $showOdds = $form->get('showOdds');
 
 $errors = $form->validate([
-    '$totalNumbers' => 'required|digit'
+    'totalNumbers' => 'required|digit'
 ]);
 
 $_SESSION['result'] = [

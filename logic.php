@@ -11,39 +11,38 @@ if (isset($_SESSION['result'])) {
 
     $lotteryList = [];
 
-//    dump($totalNumbers);
-//    die();
-
-    for ($i = 0; $i < $randomNumbers; $i++) {
-        $var = random_int(1, $totalNumbers);
-        array_push($lotteryList, $var);
-    }
-
-    function factorial($totalNumbers)
-    {
-        if ($totalNumbers <= 1) {
-            return 1;
-        } else {
-            return factorial($totalNumbers - 1) * $totalNumbers;
+//    $chill = (int)$totalNumbers;
+    if (!$errors) {
+        for ($i = 0; $i < $randomNumbers; $i++) {
+            $var = random_int(1, $totalNumbers);
+            array_push($lotteryList, $var);
         }
-    }
 
-    function combinations($totalNumbers, $randomNumbers)
-    {
-//note this defualts to 0 if $n < $k
-        if ($totalNumbers < $randomNumbers) {
-            return 0;
-        } else {
-            return factorial($totalNumbers) / (factorial($randomNumbers) * factorial(($totalNumbers - $randomNumbers)));
+        function factorial($totalNumbers)
+        {
+            if ($totalNumbers <= 1) {
+                return 1;
+            } else {
+                return factorial($totalNumbers - 1) * $totalNumbers;
+            }
         }
-    }
 
-    $oddResults = combinations($totalNumbers, $randomNumbers);
+        function combinations($totalNumbers, $randomNumbers)
+        {
+            if ($totalNumbers < $randomNumbers) {
+                return 0;
+            } else {
+                return factorial($totalNumbers) / (factorial($randomNumbers) * factorial(($totalNumbers - $randomNumbers)));
+            }
+        }
+
+        $oddResults = combinations($totalNumbers, $randomNumbers);
+    }
 
     session_unset();
 }
 
-
+session_unset();
 
 
 //function factorial($n) {

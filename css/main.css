@@ -28,3 +28,11 @@ img {
 .top-spacing {
     margin-top: 40px;
 }
+
+#emailHelp {
+    color: red;
+}
+
+.textColor {
+    color: red;
+}

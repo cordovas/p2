@@ -33,18 +33,16 @@ require 'logic.php'
                name='totalNumbers'
                placeholder="How many numbers are in the range?">
 
-<!--        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
-    </div>
+        <!--        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
 
-    <?php if (isset($errors)) : ?>
-        <small id="emailHelp" class="form-text text-muted"><?= $errors ?></small>    <!--    <div class='alert alert-danger'>-->
-    <!--        <ul>-->
-    <!--            --><?php //foreach ($errors as $error) : ?>
-    <!--                <li>--><?//= $error ?><!--</li>-->
-    <!--            --><?php //endforeach ?>
-    <!--        </ul>-->
-    <!--    </div>-->
-    <?php endif ?>
+        <?php if (isset($errors)) : ?>
+            <small id="emailHelp" class="form-text textColor">
+                <?php foreach ($errors as $error) : ?>
+                    <?= $error ?>
+                <?php endforeach; ?>
+            </small>
+        <?php endif ?>
+    </div>
 
 
     <div class="form-group">
@@ -67,22 +65,25 @@ require 'logic.php'
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
-<?php if (isset($totalNumbers)) : ?>
+<?php if (isset($errors)) : ?>
 
-    <div class="alert alert-primary top-spacing" role="alert">
-        Your amazingly lucky numbers are:
-        <?php echo implode(', ', $lotteryList); ?>
-    </div>
+    <?php if (isset($totalNumbers)) : ?>
 
-<?php endif; ?>
+        <div class="alert alert-primary top-spacing" role="alert">
+            Your amazingly lucky numbers are:
+            <?php echo implode(', ', $lotteryList); ?>
+        </div>
 
-<?php if (isset($showOdds)) : ?>
+    <?php endif; ?>
 
-    <div class="alert alert-warning" role="alert">
-        Your odds of winning are 1 in
-        <?php echo $oddResults; ?>
-    </div>
+    <?php if (isset($showOdds)) : ?>
 
+        <div class="alert alert-warning" role="alert">
+            Your odds of winning are 1 in
+            <?php echo $oddResults; ?>
+        </div>
+
+    <?php endif; ?>
 <?php endif; ?>
 
 
